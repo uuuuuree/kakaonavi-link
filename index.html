@@ -1,32 +1,49 @@
-<!DOCTYPE html>
-<html lang="ko">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>카카오내비 길안내</title>
-  <script>
-    window.onload = function () {
-      // User-Agent로 모바일 여부 감지
-      const isMobile = /iPhone|Android/i.test(navigator.userAgent);
-
-      if (isMobile) {
-        // 모바일인 경우: 카카오내비 실행 시도
-        const kakaoNaviUrl = "kakaonavi://navigate?dest_lat=35.480726&dest_lng=128.755098&dest_name=밀양시청";
-        window.location.href = kakaoNaviUrl;
-
-        // 앱이 설치되지 않은 경우 대비
-        setTimeout(function () {
-          alert("카카오내비가 설치되어 있지 않거나 실행되지 않으면 앱스토어에서 설치해주세요.");
-        }, 2000);
-      } else {
-        // PC 브라우저인 경우: 아무것도 안보이게 (흰 화면처럼 보이게)
-        document.body.innerHTML = "";
-        document.title = "404 Not Found";
-      }
-    };
-  </script>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.6">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; -webkit-text-stroke: #000000}
+    span.s1 {font-kerning: none}
+  </style>
 </head>
 <body>
-  <!-- 모바일에서만 보일 메시지 (웹에선 제거됨) -->
-  <p style="display:none;">카카오내비로 연결 중입니다...</p>
+<p class="p1"><span class="s1">&lt;!DOCTYPE html&gt;</span></p>
+<p class="p1"><span class="s1">&lt;html lang="ko"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;head&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;meta charset="UTF-8"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;title&gt;카카오내비로 이동&lt;/title&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;style&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>body {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-family: sans-serif;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>display: flex;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>justify-content: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>align-items: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>height: 100vh;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background: #f9f9f9;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>a.button {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>padding: 1em 2em;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background-color: #ffcd00;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>color: #000;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border-radius: 8px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>text-decoration: none;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-weight: bold;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/head&gt;</span></p>
+<p class="p1"><span class="s1">&lt;body&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;a class="button"</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">     </span>href="kakaonavi://navigate?name=출판기념회장소&amp;x=128.755098&amp;y=35.480726"</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">     </span>onclick="setTimeout(() =&gt; window.location.href='https://play.google.com/store/apps/details?id=com.locnall.KimGiSa', 1000);"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">     </span>카카오내비로 길안내</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/a&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/body&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/html&gt;</span></p>
 </body>
 </html>
