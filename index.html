@@ -1,38 +1,32 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="ko">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2575.6">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
-  </style>
+  <meta charset="UTF-8">
+  <title>카카오내비 길안내</title>
+  <script>
+    window.onload = function () {
+      // User-Agent로 모바일 여부 감지
+      const isMobile = /iPhone|Android/i.test(navigator.userAgent);
+
+      if (isMobile) {
+        // 모바일인 경우: 카카오내비 실행 시도
+        const kakaoNaviUrl = "kakaonavi://navigate?dest_lat=35.480726&dest_lng=128.755098&dest_name=밀양시청";
+        window.location.href = kakaoNaviUrl;
+
+        // 앱이 설치되지 않은 경우 대비
+        setTimeout(function () {
+          alert("카카오내비가 설치되어 있지 않거나 실행되지 않으면 앱스토어에서 설치해주세요.");
+        }, 2000);
+      } else {
+        // PC 브라우저인 경우: 아무것도 안보이게 (흰 화면처럼 보이게)
+        document.body.innerHTML = "";
+        document.title = "404 Not Found";
+      }
+    };
+  </script>
 </head>
 <body>
-<p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p1">&lt;html lang="ko"&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta charset="UTF-8"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;카카오내비 길안내&lt;/title&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;script&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>// 이건 페이지가 열리자마자 자동으로 카카오내비 앱을 실행하는 코드야</p>
-<p class="p1"><span class="Apple-converted-space">    </span>window.onload = function () {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>const kakaoNaviUrl = "kakaonavi://navigate?dest_lat=35.480726&amp;dest_lng=128.755098&amp;dest_name=밀양시청";</p>
-<p class="p1"><span class="Apple-converted-space">      </span>window.location.href = kakaoNaviUrl;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">      </span>// 만약 앱이 실행되지 않을 경우 대비용 (예: PC나 설치 안된 경우)</p>
-<p class="p1"><span class="Apple-converted-space">      </span>setTimeout(function () {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>alert("카카오내비가 설치되어 있지 않거나 실행되지 않으면 앱스토어에서 설치해주세요.");</p>
-<p class="p1"><span class="Apple-converted-space">      </span>}, 2000);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>};</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/script&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p1">&lt;body&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;p&gt;카카오내비로 연결 중입니다...&lt;/p&gt;</p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
+  <!-- 모바일에서만 보일 메시지 (웹에선 제거됨) -->
+  <p style="display:none;">카카오내비로 연결 중입니다...</p>
 </body>
 </html>
